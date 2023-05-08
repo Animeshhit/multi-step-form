@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="container flex items-center justify-center">
+      <div class="main_container flex gap tab_one">
+        <div class="sidebar">
+          <div class="step_container step_side_one flex items-center gap">
+            <div class="step_number flex items-center justify-center">1</div>
+            <div class="step_info">
+              <h2 class="step_title">Step 1</h2>
+              <p class="step_text">Your info</p>
+            </div>
+          </div>
+          <div class="step_container step_side_two flex items-center gap">
+            <div class="step_number flex items-center justify-center">2</div>
+            <div class="step_info">
+              <h2 class="step_title">Step 2</h2>
+              <p class="step_text">Select plan</p>
+            </div>
+          </div>
+          <div class="step_container step_side_three flex items-center gap">
+            <div class="step_number flex items-center justify-center">3</div>
+            <div class="step_info">
+              <h2 class="step_title">Step 3</h2>
+              <p class="step_text">Add-ons</p>
+            </div>
+          </div>
+          <div class="step_container step_side_four flex items-center gap">
+            <div class="step_number flex items-center justify-center">4</div>
+            <div class="step_info">
+              <h2 class="step_title">Step 4</h2>
+              <p class="step_text">Summary</p>
+            </div>
+          </div>
+        </div>
+        <div class="main_content">
+          <div data-id="1" class="step_view">
+            <!-- step 1  -->
+            <div class="step_view_one none">
+              <h1 class="text-heading">Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+              <form class="step_one_form">
+                <div class="input_box firstInput">
+                  <div class="label_box flex items-center justify-between">
+                    <label>Name</label>
+                    <p class="form_error">This Field is Required</p>
+                  </div>
+                  <input type="text" placeholder="e.g. Stephen King" />
+                </div>
+                <div class="input_box secondInput">
+                  <div class="label_box flex items-center justify-between">
+                    <label>Email Address</label>
+                    <p class="form_error">This Field is Required</p>
+                  </div>
+                  <input
+                    type="email"
+                    placeholder="e.g. stephenking@lorem.com"
+                  />
+                </div>
+                <div class="input_box thirdInput">
+                  <div class="label_box flex items-center justify-between">
+                    <label>Phone Number</label>
+                    <p class="form_error">This Field is Required</p>
+                  </div>
+                  <input type="tel" placeholder="e.g. +1 234 567 890" />
+                </div>
+                <div class="submit_button flex justify-end" id="firstButton">
+                  <input class="btn-submit" value="Next Step" type="submit" />
+                </div>
+              </form>
+            </div>
+            <!-- step-1 end  -->
+            <!-- step 2  -->
+            <div class="step_view_two none">
+              <h1 class="text-heading">Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+              <div class="billing_section monthly">
+                <div class="bill_selection_section">
+                  <div class="monthly_section none items-center gap">
+                    <div class="bill" data-id="1M">
+                      <img src="./assets/images/icon-arcade.svg" alt="arcade" />
+                      <div class="bill_info">
+                        <h1>Arcade</h1>
+                        <p>$9/mo</p>
+                      </div>
+                    </div>
+                    <div class="bill" data-id="2M">
+                      <img
+                        src="./assets/images/icon-advanced.svg"
+                        alt="advanced"
+                      />
+                      <div class="bill_info">
+                        <h1>Advanced</h1>
+                        <p>$12/mo</p>
+                      </div>
+                    </div>
+                    <div class="bill" data-id="3M">
+                      <img src="./assets/images/icon-pro.svg" alt="pro" />
+                      <div class="bill_info">
+                        <h1>Pro</h1>
+                        <p>$15/mo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="yearly_section none items-center gap">
+                    <div class="bill" data-id="1Y">
+                      <img src="./assets/images/icon-arcade.svg" alt="Arcade" />
+                      <div class="bill_info">
+                        <h1>Arcade</h1>
+                        <p>$90/yr</p>
+                        <p class="free_info">2 months Free</p>
+                      </div>
+                    </div>
+                    <div class="bill" data-id="2Y">
+                      <img
+                        src="./assets/images/icon-advanced.svg"
+                        alt="Advanced"
+                      />
+                      <div class="bill_info">
+                        <h1>Advanced</h1>
+                        <p>$120/yr</p>
+                        <p class="free_info">2 months Free</p>
+                      </div>
+                    </div>
+                    <div class="bill" data-id="3Y">
+                      <img src="./assets/images/icon-pro.svg" alt="pro" />
+                      <div class="bill_info">
+                        <h1>Pro</h1>
+                        <p>$150/yr</p>
+                        <p class="free_info">2 months Free</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle_button flex items-center justify-center">
+                  <div
+                    class="toggle_wrapper flex items-center justify-between gap"
+                  >
+                    <p class="mtext">Monthly</p>
+                    <div class="toggle_btn flex items-center">
+                      <input class="toggle_area" disabled />
+                      <div class="toggle_icon"></div>
+                    </div>
+                    <p class="ytext">Yearly</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex buttons_section_two items-center justify-between"
+              >
+                <button onclick="setTab(1)" class="btn-submit text-btn">
+                  Go Back
+                </button>
+                <button id="stepTwoNextBtn" class="btn-submit">
+                  Next Step
+                </button>
+              </div>
+            </div>
+            <!-- step 2 end  -->
+            <!-- step 3  -->
+            <div class="step_view_three none">
+              <h1>Pick add-ons</h1>
+              <p>Add-ons help enhance your gaming experience.</p>
+              <div class="add_on_section yearly_on">
+                <div
+                  class="add_on flex items-center justify-between"
+                  data-id="1"
+                >
+                  <div class="add_on_left flex items-center gap-2">
+                    <input type="checkbox" id="add" />
+                    <div class="add_on_info">
+                      <h2>Online service</h2>
+                      <p>Access to multiplayer games</p>
+                    </div>
+                  </div>
+                  <p class="add_on_right">+$1/mo</p>
+                </div>
+
+                <div
+                  class="add_on flex items-center justify-between"
+                  data-id="2"
+                >
+                  <div class="add_on_left flex items-center gap-2">
+                    <input type="checkbox" id="add" />
+                    <div class="add_on_info">
+                      <h2>Larger storage</h2>
+                      <p>Extra 1TB of cloud save</p>
+                    </div>
+                  </div>
+                  <p class="add_on_right">+$2/mo</p>
+                </div>
+
+                <div
+                  class="add_on flex items-center justify-between"
+                  data-id="3"
+                >
+                  <div class="add_on_left flex items-center gap-2">
+                    <input type="checkbox" id="add" />
+                    <div class="add_on_info">
+                      <h2>Customizable Profile</h2>
+                      <p>Customizable Profile Custom theme on your profile</p>
+                    </div>
+                  </div>
+                  <p class="add_on_right">+$2/mo</p>
+                </div>
+              </div>
+              <div
+                class="flex buttons_section_three items-center justify-between"
+              >
+                <button onchange="setTab(2)" class="btn-submit text-btn">
+                  Go Back
+                </button>
+                <button id="stepThreeNextBtn" class="btn-submit">
+                  Next Step
+                </button>
+              </div>
+            </div>
+            <!-- step 3 end  -->
+            <!-- step 4 -->
+            <div class="step_view_four none">
+              <h1>Finishing up</h1>
+              <p>Double-check everything looks OK before confirming.</p>
+              <div class="pricing_final">
+                <div class="flex price items-center justify-between">
+                  <div class="price_left">
+                    <h1 id="main_plan"></h1>
+                    <p id="changePlan">change</p>
+                  </div>
+                  <p id="plan_price">$9/mo</p>
+                </div>
+                <hr class="hr" />
+                <div id="addOns">
+                  <!-- <div class="price p_two flex items-center justify-between">
+                    <div class="price_left">
+                      <h1>Online Services</h1>
+                    </div>
+                    <p>+$2/mo</p>
+                  </div>
+                  <div class="price p_two flex items-center justify-between">
+                    <div class="price_left">
+                      <h1>Online Services</h1>
+                    </div>
+                    <p>+$2/mo</p>
+                  </div> -->
+                </div>
+                <div
+                  class="price p_three p_two flex items-center justify-between"
+                >
+                  <div class="price_left">
+                    <h1>Total Price(per Month)</h1>
+                  </div>
+                  <p id="totalPrice"></p>
+                </div>
+              </div>
+              <div
+                class="flex buttons_section_four items-center justify-between"
+              >
+                <button onclick="setTab(3)" class="btn-submit text-btn">
+                  Go Back
+                </button>
+                <button id="thirdNextBtn" class="btn-submit">Next Step</button>
+              </div>
+            </div>
+            <!-- step 4 end  -->
+            <div
+              class="step_view_welcome flex items-center justify-center none"
+            >
+              <div class="welcome_screen">
+                <img src="assets/images/icon-thank-you.svg" alt="welcome" />
+                <h1>Thank You!</h1>
+                <p>
+                  Thanks For Confirming Your Subscription! We hope you have fun
+                  using our platform. If you ever need support please feel free
+                  to email us at animeshkum723126@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
